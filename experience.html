@@ -43,4 +43,34 @@
         </section>
 
     </div>
+    <style>
+        .card--work-history {
+            border-left: 1px solid var(--mainBorderColor);
+            margin-top: 3em;
+            margin-bottom: 3em;
+            padding-left: 2em;
+            color: var(--secondaryTextColor);
+        }
+
+        .line--break {
+            background-color: var(--mainBorderColor);
+            height: 1px;
+        }
+
+        @media(max-width:600px) {
+            .card--work-history {
+                margin-left: 20px;
+            }
+
+            .line--break {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            h2 {
+                text-align: center;
+            }
+        }
+    </style>
+    <script src="./js/main.js"></script>
 </body>

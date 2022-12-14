@@ -6,17 +6,23 @@
     --mainLinkColor: #44d8ef;
     --mainBorderColor: rgb(218, 218, 218);
     --mainBgColor: rgb(249, 250, 251);
+    --mainGreenColor: rgb(16, 242, 159);
 }
 
 * {
     font-family: "Readex Pro";
-    /* Fuente de toda la pagina */
     line-height: 1.5em;
-    /* Espacio entre lineas */
     box-sizing: border-box;
-    /* verifica que no se junten las cosas? */
-    color: var(--mainTextColor);
-    /* Color de fuente */
+}
+
+#containter--main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 /* Background */
@@ -45,13 +51,26 @@ body {
     z-index: -1;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 /* Menu Bar */
 #menu--bar {
     margin: 27px auto 0;
     position: relative;
-    width: 400px;
+    width: 480px;
     height: 50px;
-    /* background-color: rgb(44, 83, 100); */
     border-radius: 8px;
     font-size: 0;
 }
@@ -80,250 +99,45 @@ body {
 }
 
 #option:nth-child(1) {
-    width: 100px;
+    width: 120px;
 }
 
 #option:nth-child(2) {
-    width: 100px;
+    width: 120px;
 }
 
 #option:nth-child(3) {
-    width: 100px;
+    width: 120px;
 }
 
 #option:nth-child(4) {
-    width: 100px;
+    width: 120px;
 }
 
 #menu--bar .start-home,
 #option:nth-child(1):hover~.animation {
-    width: 100px;
+    width: 120px;
     left: 0;
     background-color: black;
 }
 
 #menu--bar .start-about,
 #option:nth-child(2):hover~.animation {
-    width: 100px;
-    left: 100px;
+    width: 120px;
+    left: 120px;
     background-color: black;
 }
 
 #menu--bar .start-esperience,
 #option:nth-child(3):hover~.animation {
-    width: 100px;
-    left: 200px;
+    width: 120px;
+    left: 240px;
     background-color: black;
 }
 
 #menu--bar .start-proyects,
 #option:nth-child(4):hover~.animation {
-    width: 100px;
-    left: 300px;
+    width: 120px;
+    left: 360px;
     background-color: black;
-}
-
-p,
-span,
-li {
-    color: var(--secondaryTextColor);
-    /* Color de fuente */
-    font-size: 1.em;
-    /* Tamaño de fuente 1em = 15px */
-}
-
-a {
-    text-decoration: none;
-    /* Elimina "decoracioN" de texto. En este caso le saca el subrayado */
-    color: var(--mainLinkColor);
-    /* Color de fuente */
-    font-weight: 500;
-    /* Negrita */
-}
-
-li {
-    line-height: 1.9em;
-    /* Separacion entre lineas */
-}
-
-#containter--main {
-    max-width: 700px;
-    /* Distancia entre borde derecho y contenido*/
-    margin: 0 auto;
-    /* Lo centra*/
-}
-
-.section--page {
-    padding-top: 1em;
-    /* Aleja de arriba*/
-    padding-bottom: 1em;
-    /* Aleja de abajo*/
-}
-
-#wrapper--hero {
-    display: flex;
-    /* Alinea */
-    align-items: center;
-    /* Centra */
-    gap: 4em;
-    /* Distancia elementos*/
-}
-
-#user--name {
-    font-size: 3em;
-    line-height: 1em;
-}
-
-#bio,
-a {
-    font-weight: 300;
-}
-
-#profile-pic {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-#email {
-    color: var(--secondaryTextColor);
-    transition: 0.3s;
-}
-
-#email:hover {
-    color: var(--mainLinkColor);
-
-}
-
-#socials--links {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 1.5em;
-    flex-wrap: wrap;
-}
-
-#socials--links a {
-    font-size: 0.9em;
-    color: var(--secondaryTextColor);
-    transition: 0.3s;
-    /* Delay en cambiar de color */
-}
-
-#socials--links a:hover {
-    /* Pasar mouse sobre links */
-    color: var(--mainLinkColor)
-}
-
-#info1 {
-    display: flex;
-    gap: 1em;
-}
-
-#info1 ul {
-    list-style: none;
-}
-
-#info2 {
-    display: flex;
-    gap: 8em;
-}
-
-#info2 ul {
-    list-style: none;
-}
-
-#progress-bar {
-    background-color: black;
-    border-radius: 13px;
-    width: 250px;
-    margin-left: 35px;
-    padding: 3px;
-    text-align: center;
-    font-size: 15px;
-}
-
-#progress-bar div {
-    background-color: rgb(16, 242, 159);
-    width: 50%;
-    height: 20px;
-    border-radius: 10px;
-}
-
-/* experiencia laboral y proyectos */
-.card--work-history {
-    border-left: 1px solid var(--mainBorderColor);
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding-left: 2em;
-}
-
-.line--break {
-    background-color: var(--mainBorderColor);
-    height: 1px;
-}
-
-.card--proyect {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-top: 1px solid var(--mainBorderColor);
-}
-
-.card--proyect li {
-    list-style: none;
-    margin-left: 30px;
-}
-
-/* Cambios cuando la pantalla es de menor resolucion */
-@media(max-width:600px) {
-    #wrapper--hero {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    #profile-pic {
-        width: 300px;
-        height: 300px;
-    }
-
-    #socials--links {
-        justify-content: center;
-    }
-
-    #about {
-        text-align: center;
-    }
-
-    #about--me {
-        margin: 20px;
-        text-align: center;
-    }
-
-    #info2 {
-        gap: 3em;
-    }
-
-    .section--page {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-
-    .card--work-history {
-        border-left: none;
-        padding-left: 0;
-    }
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    50% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0% 0%;
-    }
 }

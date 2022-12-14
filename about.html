@@ -29,6 +29,7 @@
                     <li>➤ Jupyter Notebooks</li>
                     <li>➤ R/RStudio</li>
                     <li>➤ SQL</li>
+                    <li>➤ HTML/CSS</li>
                     <li>➤ Excel</li>
                     <li>➤ Estadistica</li>
                     <li>➤ Algebra</li>
@@ -79,4 +80,60 @@
             </div>
         </section>
     </div>
+    <style>
+        li {
+            color: var(--secondaryTextColor);
+            line-height: 1.9em;
+        }
+
+        #info1 {
+            display: flex;
+            gap: 1em;
+        }
+
+        #info1 ul {
+            list-style: none;
+        }
+
+        #info2 {
+            display: flex;
+            gap: 6em;
+        }
+
+        #info2 ul {
+            list-style: none;
+        }
+
+        #progress-bar {
+            background-color: black;
+            border-radius: 13px;
+            width: 250px;
+            margin-left: 35px;
+            padding: 3px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        #progress-bar div {
+            background-color: rgb(16, 242, 159);
+            width: 50%;
+            height: 20px;
+            border-radius: 10px;
+        }
+
+        @media(max-width:600px) {
+            #info1 {
+                display: block;
+            }
+
+            #info2 {
+                display: block;
+            }
+
+            ul {
+                text-align: justify;
+            }
+        }
+    </style>
+    <script src="./js/main.js"></script>
 </body>

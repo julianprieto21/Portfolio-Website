@@ -7,28 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" <meta name="viewport"
         content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
-    <link rel="website icon" type="png" href="./assets/images/logo.png" </head>
+    <link rel="website icon" type="png" href="./assets/images/logo.png">
+    <script src="https://kit.fontawesome.com/8a923e9dee.js" crossorigin="anonymous"></script>
+</head>
 
 
 <body>
 
     <div id="containter--main">
 
-        <section id="wrapper--hero" class="section--page">
-            <img id="profile-pic" src="./assets/images/foto.jpeg" />
+        <section id="head--info" class="section--page">
+            <img src="./assets/images/foto.jpeg" />
             <div>
-                <h1 id="user--name">Julián Prieto</h1>
-                <p id="bio">Data Analyst, Data Scientist</p>
-                <a id="email" href="mailto:prietojulian2003@gmail.com"> 📧
+                <h1>Julián Prieto</h1>
+                <p>Data Analyst, Data Scientist</p>
+                <a href="mailto:prietojulian2003@gmail.com"> 📧
                     prietojulian2003@gmail.com</a>
             </div>
         </section>
 
         <section class="section--page">
             <div id="socials--links">
-                <a href="https://github.com/julianprieto21" target="_blank">Github</a>
-                <a href="https://www.linkedin.com/in/julian-prieto-809397253/" target="_blank">LinkedIn</a>
-                <a href="./assets/curriculum.pdf" target="_blank">Curriculum Vitae</a>
+                <a href="https://github.com/julianprieto21" target="_blank"><i class="fa fa-github fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/julian-prieto-809397253/" target="_blank"><i
+                        class="fa fa-linkedin fa-3x"></i></a>
+                <a href="./assets/curriculum.pdf" target="_blank"><i class="fa fa-info-circle fa-3x"></i></a>
             </div>
         </section>
 
@@ -42,42 +45,137 @@
             </nav>
         </section>
 
-        <section>
+        <section id="about--me" class="section--page">
             <div>
-                <h2 id="about">Acerca de mi</h2>
-                <p id="about--me">Me considero una persona activa y colaboradora, con ganas
+                <h2>Acerca de mi</h2>
+                <p>Me considero una persona activa y colaboradora, con ganas
                     de aprender y profesionalizarme en el
                     área IT. Al mismo tiempo, tengo buena
                     predisposición para el trabajo en
                     equipo y busco mi primera experiencia laboral para integrarme a un grupo
                     de trabajo que me permita seguir
                     desarrollando mis habilidades.</p>
-                <p>Personalmente, me interesa mucho el ámbito de la programación y todo lo que respecta a la ciencia de
+                <p>Personalmente, me interesa mucho el ámbito de la programación y todo lo que respecta a
+                    la ciencia de
                     datos. Constantemente estoy aprendiendo por mi cuenta nuevos conceptos y métodos referidos tanto al
                     Machine Learning, Depp Learning, Visualización de Datos, como también a Python y SQL. Por otra
                     parte, poco a poco me voy interiorizando en los ambientes de la programación Web utilizando
                     HTML, CSS y JavaScript.</p>
-                <p>Me gusta mucho realizar proyectos que desafien mi logica y mis habilidades porque considero que es la
+                <p>Me gusta mucho realizar proyectos que desafien mi logica y mis habilidades porque
+                    considero que es la
                     mejor manera de aprender y poder resolver problemas cada vez mas complejos.</p>
             </div>
             <div>
-                <h2 id="about">About me</h2>
-                <p id="about--me">I consider myself an active and collaborative person, eager to learn and become a
+                <h2>About me</h2>
+                <p>I consider myself an active and collaborative person, eager to learn and become a
                     professional in the IT area. At the same time, I have a good predisposition for teamwork and I am
                     looking for my first work experience to join a work group that allows me to continue developing my
                     skills.</p>
-                <p>I am personally interested in the field of programming and everything related to data science.
+                <p>I am personally interested in the field of programming and everything related to data
+                    science.
                     I am constantly learning on my own new concepts and methods related to Machine Learning, Depp
                     Learning, Data Visualization, as well as Python and SQL. On the other hand, I have also been
                     learning about the environments of Web programming using HTML, CSS and JavaScript.</p>
-                <p>I really like to carry out projects that challenge my logic and my abilities because I consider that
+                <p>I really like to carry out projects that challenge my logic and my abilities because I
+                    consider that
                     it is the best way to learn and be able to solve increasingly complex problems.</p>
             </div>
         </section>
 
 
     </div>
+    <style>
+        p {
+            color: var(--secondaryTextColor);
+        }
 
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #head--info {
+            display: flex;
+            align-items: center;
+            gap: 4em;
+        }
+
+        #head--info h1 {
+            font-size: 3em;
+            line-height: 1em;
+        }
+
+        #head--info img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #head--info a {
+            color: var(--secondaryTextColor);
+            transition: 0.3s;
+            font-weight: 300;
+        }
+
+        #head--info a:hover {
+            color: var(--mainLinkColor);
+        }
+
+        #socials--links {
+            position: relative;
+            text-align: left;
+            margin-left: 12px;
+            width: 50%;
+            top: 40%;
+        }
+
+        #socials--links a {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            margin: 2px 4px;
+            position: relative;
+            -webkit-transition-duration: 0.4s;
+            -moz-transition-duration: 0.4s;
+            -o-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+        }
+
+        #socials--links a:hover {
+            color: #fff;
+            opacity: 0.9;
+            text-shadow: 2px 3px 5px rgb(12, 199, 131);
+            top: -3px;
+        }
+
+        @media(max-width:600px) {
+            #head--info {
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            #head--info img {
+                width: 300px;
+                height: 300px;
+            }
+
+            #socials--links {
+                text-align: right;
+            }
+
+            #about--me h2 {
+                text-align: center;
+                font-size: 30px;
+            }
+
+            #about--me p {
+                text-align: center;
+                margin: 10px 10px
+            }
+        }
+    </style>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
