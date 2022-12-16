@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <title>Prieto Julián - Portfolio</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
     <link rel="website icon" type="png" href="./assets/images/logo.png">
     <script src="https://kit.fontawesome.com/8a923e9dee.js" crossorigin="anonymous"></script>
 </head>
 
-
 <body>
-
     <div id="containter--main">
-
         <section id="head--info" class="section--page">
             <img src="./assets/images/foto.jpeg" />
-            <div>
+            <div id="data">
                 <h1>Julián Prieto</h1>
                 <p>Data Analyst, Data Scientist</p>
                 <a href="mailto:prietojulian2003@gmail.com"> 📧
@@ -35,147 +31,311 @@
             </div>
         </section>
 
-        <section class="section--page">
-            <nav id="menu--bar">
-                <a id="option" href="index.html">Home</a>
-                <a id="option" href="about.html">+ About Me</a>
-                <a id="option" href="experience.html">Experience</a>
-                <a id="option" href="proyects.html">Proyects</a>
-                <div class="animation start-"></div>
-            </nav>
-        </section>
-
-        <section id="about--me" class="section--page">
-            <div>
-                <h2>Acerca de mi</h2>
-                <p>Me considero una persona activa y colaboradora, con ganas
-                    de aprender y profesionalizarme en el
-                    área IT. Al mismo tiempo, tengo buena
-                    predisposición para el trabajo en
-                    equipo y busco mi primera experiencia laboral para integrarme a un grupo
-                    de trabajo que me permita seguir
-                    desarrollando mis habilidades.</p>
-                <p>Personalmente, me interesa mucho el ámbito de la programación y todo lo que respecta a
-                    la ciencia de
-                    datos. Constantemente estoy aprendiendo por mi cuenta nuevos conceptos y métodos referidos tanto al
-                    Machine Learning, Depp Learning, Visualización de Datos, como también a Python y SQL. Por otra
-                    parte, poco a poco me voy interiorizando en los ambientes de la programación Web utilizando
-                    HTML, CSS y JavaScript.</p>
-                <p>Me gusta mucho realizar proyectos que desafien mi logica y mis habilidades porque
-                    considero que es la
-                    mejor manera de aprender y poder resolver problemas cada vez mas complejos.</p>
-            </div>
-            <div>
-                <h2>About me</h2>
-                <p>I consider myself an active and collaborative person, eager to learn and become a
-                    professional in the IT area. At the same time, I have a good predisposition for teamwork and I am
-                    looking for my first work experience to join a work group that allows me to continue developing my
-                    skills.</p>
-                <p>I am personally interested in the field of programming and everything related to data
-                    science.
-                    I am constantly learning on my own new concepts and methods related to Machine Learning, Depp
-                    Learning, Data Visualization, as well as Python and SQL. On the other hand, I have also been
-                    learning about the environments of Web programming using HTML, CSS and JavaScript.</p>
-                <p>I really like to carry out projects that challenge my logic and my abilities because I
-                    consider that
-                    it is the best way to learn and be able to solve increasingly complex problems.</p>
+        <section class="container">
+            <div class="tabs">
+                <input type="radio" id="radio-1" name="tabs" checked onclick="mostrar_home()" />
+                <label class="tab" for="radio-1">Home</label>
+                <input type="radio" id="radio-2" name="tabs" onclick="mostrar_about()" />
+                <label class="tab" for="radio-2">+ About Me</label>
+                <input type="radio" id="radio-3" name="tabs" onclick="mostrar_exp()" />
+                <label class="tab" for="radio-3">Experience</label>
+                <input type="radio" id="radio-4" name="tabs" onclick="mostrar_pro()" />
+                <label class="tab" for="radio-4">Proyects</label>
+                <span class="glider"></span>
             </div>
         </section>
+        <div id="home">
+            <section id="about--me" class="section--page">
+                <div>
+                    <h2>Acerca de mi</h2>
+                    <p>Me considero una persona activa y colaboradora, con ganas
+                        de aprender y profesionalizarme en el
+                        área IT. Al mismo tiempo, tengo buena
+                        predisposición para el trabajo en
+                        equipo y busco mi primera experiencia laboral para integrarme a un grupo
+                        de trabajo que me permita seguir
+                        desarrollando mis habilidades.</p>
+                    <p>Personalmente, me interesa mucho el ámbito de la programación y todo lo que respecta a
+                        la ciencia de
+                        datos. Constantemente estoy aprendiendo por mi cuenta nuevos conceptos y métodos referidos tanto
+                        al
+                        Machine Learning, Depp Learning, Visualización de Datos, como también a Python y SQL. Por otra
+                        parte, poco a poco me voy interiorizando en los ambientes de la programación Web utilizando
+                        HTML, CSS y JavaScript.</p>
+                    <p>Me gusta mucho realizar proyectos que desafien mi logica y mis habilidades porque
+                        considero que es la
+                        mejor manera de aprender y poder resolver problemas cada vez mas complejos.</p>
+                </div>
+                <div>
+                    <h2>About me</h2>
+                    <p>I consider myself an active and collaborative person, eager to learn and become a
+                        professional in the IT area. At the same time, I have a good predisposition for teamwork and I
+                        am
+                        looking for my first work experience to join a work group that allows me to continue developing
+                        my
+                        skills.</p>
+                    <p>I am personally interested in the field of programming and everything related to data
+                        science.
+                        I am constantly learning on my own new concepts and methods related to Machine Learning, Depp
+                        Learning, Data Visualization, as well as Python and SQL. On the other hand, I have also been
+                        learning about the environments of Web programming using HTML, CSS and JavaScript.</p>
+                    <p>I really like to carry out projects that challenge my logic and my abilities because I
+                        consider that
+                        it is the best way to learn and be able to solve increasingly complex problems.</p>
+                </div>
+            </section>
+        </div>
+        <div id="about-me">
+            <section id="info1" class="section--page">
+                <div id="skills">
+                    <center>
+                        <h2>Habilidades</h2>
+                    </center>
+                    <ul id=" skills--list">
+                        <li>➤ Python</li>
+                        <li>➤ Jupyter Notebooks</li>
+                        <li>➤ R/RStudio</li>
+                        <li>➤ SQL</li>
+                        <li>➤ HTML/CSS</li>
+                        <li>➤ Excel</li>
+                        <li>➤ Estadistica</li>
+                        <li>➤ Algebra</li>
+                        <li>➤ Pensamiento crítico/lógico</li>
+                    </ul>
+                </div>
+                <div>
+                    <center>
+                        <h2>Educación</h2>
+                    </center>
+                    <ul id="education--list">
+                        <li id="universidad">➤ Universidad Nacional Guillermo Brown</li>
+                        <ul id="univ--info">
+                            <li>LICENCIATURA en CIENCIA de DATOS</li>
+                            <li>2021-ACTUALIDAD</li>
+                        </ul>
+                        <div id="bar">
+                            <div id="progress-bar">
+                                <div>50%</div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </section>
 
+            <section id="info2" class="section--page">
+                <div id="idiomas">
+                    <center>
+                        <h2>Idiomas</h2>
+                    </center>
+                    <ul id=" idiomas--list">
+                        <li>➤ Español: Nativo</li>
+                        <li>➤ Ingles: Nivel Intermedio/B2</li>
+                    </ul>
+                </div>
+                <div>
+                    <center>
+                        <h2>Intereses</h2>
+                    </center>
+                    <ul id="intereses--list">
+                        <li>➤ Programación</li>
+                        <li>➤ Machine Learning</li>
+                        <li>➤ Deep Learning</li>
+                        <li>➤ Web Development</li>
+                        <li>➤ Gamedev </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div id="experiencias">
+            <section class="section--page">
+                <h2>Experiencia Laboral</h2>
+                <div class="line--break"></div>
+                <div class="card--work-history">
+                    <strong>Sin Experiencia</strong>
+                    <!-- <p>03/2022 - 10/2022</p>
+                    <p>Trato con clientes de manera virtual</p>
+                    <ul>
+                        <li>cosas especificas que hice</li>
+                    </ul> -->
+                </div>
+                <!-- 
+                <div class="line--break"></div>
+                <div class="card--work-history">
+                    <strong>Atención al cliente</strong>
+                    <p>03/2022 - 10/2022</p>
+                    <p>Trato con clientes de manera virtual</p>
+                    <ul>
+                        <li>cosas especificas que hice</li>
+                    </ul>
+                </div> -->
+            </section>
+        </div>
+
+        <div id="proyectos">
+            <section class="section--page">
+                <h2>Proyectos</h2>
+
+                <div class="card--proyect">
+                    <a href="https://github.com/julianprieto21/Python_Pokemon_Battles" target="_blank">🏆 Python Pokemon
+                        Battles</a>
+                    <li>Game in python inspired by the battles of the pokemon games (FireRed-LeafGreen). With a total
+                        graphical interface, almost perfectly imitatting original games.</li>
+                    <li><strong>Used libraries:</strong> Pygame</li>
+                </div>
+                <div class="card--proyect">
+                    <a href="https://github.com/julianprieto21/Sudoku-Solver" target="_blank">🏆 Python Sudoku
+                        Solver</a>
+                    <li>Program in Python to solve sudoku puzzles from images, using TensorFlow (Keras) and Backtracking
+                        Algorithms.</li>
+                    <li><strong>Used libraries:</strong> TensorFlow, Keras, Numpy, Pandas</li>
+                </div>
+                <div class="card--proyect">
+                    <a href="https://github.com/julianprieto21/GBA_Houses_EDA" target="_blank">🏆 Python
+                        Housing EDA</a>
+                    <li>Exploratory Data Analisys of housing in the Gran Buenos Aires (GBA), Argentina. The data was
+                        collected using scraping techniques.</li>
+                    <li><strong>Used libraries:</strong> Scikit-Learn, BeautifulSoup, Request, Pandas, Seaborn</li>
+                </div>
+                <div class="card--proyect">
+                    <a href="https://github.com/julianprieto21/Portfolio-Website" target="_blank">🏆Portfolio
+                        Web</a>
+                    <li>Web page made using HTML, CSS and JavaScript.</li>
+                </div>
+            </section>
+        </div>
 
     </div>
-    <style>
-        p {
-            color: var(--secondaryTextColor);
-        }
-
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        #head--info {
-            display: flex;
-            align-items: center;
-            gap: 4em;
-        }
-
-        #head--info h1 {
-            font-size: 3em;
-            line-height: 1em;
-        }
-
-        #head--info img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        #head--info a {
-            color: var(--secondaryTextColor);
-            transition: 0.3s;
-            font-weight: 300;
-        }
-
-        #head--info a:hover {
-            color: var(--mainLinkColor);
-        }
-
-        #socials--links {
-            position: relative;
-            text-align: left;
-            margin-left: 12px;
-            width: 50%;
-            top: 40%;
-        }
-
-        #socials--links a {
-            display: inline-block;
-            color: black;
-            text-decoration: none;
-            margin: 2px 4px;
-            position: relative;
-            -webkit-transition-duration: 0.4s;
-            -moz-transition-duration: 0.4s;
-            -o-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-        }
-
-        #socials--links a:hover {
-            color: #fff;
-            opacity: 0.9;
-            text-shadow: 2px 3px 5px rgb(12, 199, 131);
-            top: -3px;
-        }
-
-        @media(max-width:600px) {
-            #head--info {
-                flex-direction: column;
-                gap: 1em;
-            }
-
-            #head--info img {
-                width: 300px;
-                height: 300px;
-            }
-
-            #socials--links {
-                text-align: right;
-            }
-
-            #about--me h2 {
-                text-align: center;
-                font-size: 30px;
-            }
-
-            #about--me p {
-                text-align: center;
-                margin: 10px 10px
-            }
-        }
-    </style>
-    <script src="./js/main.js"></script>
 </body>
+<style>
+    /* Barra menu */
+    .container {
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tabs {
+        display: flex;
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+        padding: 0.4rem;
+        border-radius: 99px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 54px;
+        width: 160px;
+        font-size: 1.25rem;
+        font-weight: 200;
+        border-radius: 99px;
+        cursor: pointer;
+        transition: color 0.15s ease-in;
+    }
+
+    input[id="radio-1"]:checked~.glider {
+        transform: translateX(0);
+    }
+
+    input[id="radio-2"]:checked~.glider {
+        transform: translateX(100%);
+    }
+
+    input[id="radio-3"]:checked~.glider {
+        transform: translateX(200%);
+    }
+
+    input[id="radio-4"]:checked~.glider {
+        transform: translateX(300%);
+    }
+
+    .glider {
+        position: absolute;
+        display: flex;
+        height: 54px;
+        width: 160px;
+        background-color: rgba(16, 242, 159, 0.478);
+        z-index: 1;
+        border-radius: 99px;
+        transition: 0.25s ease-out;
+    }
+
+    @media(max-width:700px) {
+        .tab {
+            font-size: 1rem;
+            font-weight: 400;
+            width: 100px;
+        }
+
+        .glider {
+            width: 100px;
+        }
+    }
+</style>
+
+<script type="text/javascript">
+    document.querySelectorAll('.button').forEach(button => button.addEventListener('click', e => {
+        if (!button.classList.contains('delete')) {
+            button.classList.add('delete');
+            setTimeout(() => button.classList.remove('delete'), 3200);
+        }
+        e.preventDefault();
+    }));
+
+    function mostrar_home() {
+        mostrar = document.getElementById("home");
+        mostrar.style.display = "flex";
+        ocultar = document.getElementById("about-me");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("experiencias");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("proyectos");
+        ocultar.style.display = "none";
+    };
+    function mostrar_about() {
+        mostrar = document.getElementById("about-me");
+        mostrar.style.display = "block";
+        ocultar = document.getElementById("home");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("experiencias");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("proyectos");
+        ocultar.style.display = "none";
+    }
+    function mostrar_exp() {
+        mostrar = document.getElementById("experiencias");
+        mostrar.style.display = "block";
+        ocultar = document.getElementById("home");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("about-me");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("proyectos");
+        ocultar.style.display = "none";
+    }
+    function mostrar_pro() {
+        mostrar = document.getElementById("proyectos");
+        mostrar.style.display = "flex";
+        ocultar = document.getElementById("home");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("about-me");
+        ocultar.style.display = "none";
+        ocultar = document.getElementById("experiencias");
+        ocultar.style.display = "none";
+    }
+</script>
 
 </html>

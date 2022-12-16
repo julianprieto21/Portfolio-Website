@@ -9,6 +9,87 @@
     --mainGreenColor: rgb(16, 242, 159);
 }
 
+p {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    color: var(--mainLinkColor);
+    text-decoration: none;
+}
+
+li {
+    color: var(--secondaryTextColor);
+    line-height: 1.9em;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+#about-me,
+#experiencias,
+#proyectos {
+    display: none;
+}
+
+/* Cabezera */
+#head--info {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#head--info img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#head--info a {
+    color: var(--secondaryTextColor);
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+#head--info a:hover {
+    color: var(--mainLinkColor);
+}
+
+#socials--links {
+    position: relative;
+    text-align: left;
+    margin-left: 12px;
+    width: 50%;
+    top: 40%;
+}
+
+#socials--links a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin: 2px 4px;
+    position: relative;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#socials--links a:hover {
+    color: #fff;
+    opacity: 0.9;
+    text-shadow: 2px 3px 5px rgb(12, 199, 131);
+    top: -3px;
+}
+
+/* Pricipales */
 * {
     font-family: "Readex Pro";
     line-height: 1.5em;
@@ -65,79 +146,109 @@ body {
     }
 }
 
-/* Menu Bar */
-#menu--bar {
-    margin: 27px auto 0;
-    position: relative;
-    width: 480px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 0;
+/* About Me */
+#info1 {
+    display: flex;
+    gap: 1em;
 }
 
-#menu--bar #option {
-    line-height: 50px;
-    height: 100%;
-    font-size: 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-transform: uppercase;
+#info2 {
+    display: flex;
+    gap: 6em;
+}
+
+#progress-bar {
+    background-color: black;
+    border-radius: 13px;
+    width: 250px;
+    margin-left: 35px;
+    padding: 3px;
     text-align: center;
-    color: whitesmoke;
-    cursor: pointer;
+    font-size: 15px;
 }
 
-#menu--bar .animation {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 0;
-    transition: all 0.2s ease 0s;
-    border-radius: 8px;
+#progress-bar div {
+    background-color: rgb(16, 242, 159);
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
 }
 
-#option:nth-child(1) {
-    width: 120px;
+/* Experience */
+.card--work-history {
+    border-left: 1px solid var(--mainBorderColor);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    color: var(--secondaryTextColor);
 }
 
-#option:nth-child(2) {
-    width: 120px;
+.line--break {
+    background-color: var(--mainBorderColor);
+    height: 1px;
 }
 
-#option:nth-child(3) {
-    width: 120px;
+/* Proyects */
+.card--proyect {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--mainBorderColor);
 }
 
-#option:nth-child(4) {
-    width: 120px;
+.card--proyect li {
+    list-style: none;
+    margin-left: 30px;
 }
 
-#menu--bar .start-home,
-#option:nth-child(1):hover~.animation {
-    width: 120px;
-    left: 0;
-    background-color: black;
-}
+/* Small Screen */
+@media(max-width:750px) {
+    #head--info {
+        flex-direction: column;
+        gap: 1em;
+    }
 
-#menu--bar .start-about,
-#option:nth-child(2):hover~.animation {
-    width: 120px;
-    left: 120px;
-    background-color: black;
-}
+    #head--info img {
+        width: 300px;
+        height: 300px;
+    }
 
-#menu--bar .start-esperience,
-#option:nth-child(3):hover~.animation {
-    width: 120px;
-    left: 240px;
-    background-color: black;
-}
+    #socials--links {
+        text-align: right;
+        margin-left: 10px;
+    }
 
-#menu--bar .start-proyects,
-#option:nth-child(4):hover~.animation {
-    width: 120px;
-    left: 360px;
-    background-color: black;
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    p {
+        margin: 10px 10px
+    }
+
+    #info1 {
+        display: block;
+    }
+
+    #info2 {
+        display: block;
+    }
+
+    ul {
+        text-align: justify;
+    }
+
+    .card--work-history {
+        margin-left: 20px;
+    }
+
+    .line--break {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .card--proyect a {
+        margin-left: 30px;
+    }
+
 }
