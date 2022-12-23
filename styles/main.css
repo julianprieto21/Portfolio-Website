@@ -9,6 +9,23 @@
     --mainGreenColor: rgb(16, 242, 159);
 }
 
+/* Pricipales */
+* {
+    font-family: "Readex Pro";
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section--page {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 p {
     color: var(--secondaryTextColor);
 }
@@ -32,45 +49,42 @@ h1 {
     line-height: 1em;
 }
 
-#about-me,
+#more-about-me,
 #experiencias,
 #proyectos {
     display: none;
 }
 
 /* Cabezera */
-#head--info {
-    display: flex;
-    align-items: center;
-    gap: 4em;
-}
-
-#head--info img {
+header img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
     object-fit: cover;
 }
 
-#head--info a {
+header a {
     color: var(--secondaryTextColor);
     transition: 0.3s;
     font-weight: 300;
 }
 
-#head--info a:hover {
+header a:hover {
     color: var(--mainLinkColor);
 }
 
-#socials--links {
+header #data{
+    display: flex;
+    gap: 80px;
+}
+
+#socials {
     position: relative;
     text-align: left;
-    margin-left: 12px;
-    width: 50%;
     top: 40%;
 }
 
-#socials--links a {
+#socials a {
     display: inline-block;
     color: black;
     text-decoration: none;
@@ -82,29 +96,78 @@ h1 {
     transition-duration: 0.4s;
 }
 
-#socials--links a:hover {
+#socials a:hover {
     color: #fff;
     opacity: 0.9;
     text-shadow: 2px 3px 5px rgb(12, 199, 131);
     top: -3px;
 }
 
-/* Pricipales */
-* {
-    font-family: "Readex Pro";
-    line-height: 1.5em;
-    box-sizing: border-box;
+/* Navegador */
+#menu {
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.tabs {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+    padding: 0.4rem;
+    border-radius: 99px;
 }
 
-#containter--main {
-    max-width: 700px;
-    margin: 0 auto;
+input[type="radio"] {
+    display: none;
 }
 
-.section--page {
-    padding-top: 1em;
-    padding-bottom: 1em;
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 160px;
+    font-size: 1.25rem;
+    font-weight: 200;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
 }
+
+input[id="radio-1"]:checked~.glider {
+    transform: translateX(0);
+}
+
+input[id="radio-2"]:checked~.glider {
+    transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked~.glider {
+    transform: translateX(200%);
+}
+
+input[id="radio-4"]:checked~.glider {
+    transform: translateX(300%);
+}
+
+.glider {
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width: 160px;
+    background-color: rgba(16, 242, 159, 0.478);
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+
 
 /* Background */
 body {
@@ -146,7 +209,16 @@ body {
     }
 }
 
-/* About Me */
+/* About me*/
+#about-me p{
+    margin-left: 12px;
+}
+
+/* More About Me */
+#more-about-me h2{
+    text-align: center;
+}
+
 #info1 {
     display: flex;
     gap: 1em;
@@ -154,7 +226,7 @@ body {
 
 #info2 {
     display: flex;
-    gap: 6em;
+    gap: 3.5em;
 }
 
 #progress-bar {
@@ -192,7 +264,6 @@ body {
 .card--proyect {
     padding-top: 1em;
     padding-bottom: 1em;
-    border-top: 1px solid var(--mainBorderColor);
 }
 
 .card--proyect li {
@@ -200,21 +271,35 @@ body {
     margin-left: 30px;
 }
 
-/* Small Screen */
-@media(max-width:750px) {
-    #head--info {
-        flex-direction: column;
-        gap: 1em;
+/* Small Screen 700px */
+@media(max-width:700px){
+    .tab {
+        font-size: 1rem;
+        font-weight: 400;
+        width: 100px;
     }
 
-    #head--info img {
+    .glider {
+        width: 100px;
+    }
+}
+
+/* Small Screen 750px */
+@media(max-width:750px) {
+    header #data{
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        text-align: center;
+    }
+
+    header #data img {
         width: 300px;
         height: 300px;
     }
 
-    #socials--links {
-        text-align: right;
-        margin-left: 10px;
+    header #socials {
+        text-align: center;
     }
 
     h2 {
@@ -224,6 +309,10 @@ body {
 
     p {
         margin: 10px 10px
+    }
+
+    #more-about-me h2{
+        margin: 15px;
     }
 
     #info1 {
