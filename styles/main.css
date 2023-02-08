@@ -73,7 +73,7 @@ header a:hover {
     color: var(--mainLinkColor);
 }
 
-header #data{
+header #data {
     display: flex;
     gap: 80px;
 }
@@ -105,15 +105,15 @@ header #data{
 
 /* Navegador */
 #menu {
-        position: relative;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .tabs {
     display: flex;
@@ -210,12 +210,12 @@ body {
 }
 
 /* About me*/
-#about-me p{
+#about-me p {
     margin-left: 12px;
 }
 
 /* More About Me */
-#more-about-me h2{
+#more-about-me h2 {
     text-align: center;
 }
 
@@ -272,7 +272,7 @@ body {
 }
 
 /* Small Screen 700px */
-@media(max-width:700px){
+@media(max-width:700px) {
     .tab {
         font-size: 1rem;
         font-weight: 400;
@@ -286,7 +286,7 @@ body {
 
 /* Small Screen 750px */
 @media(max-width:750px) {
-    header #data{
+    header #data {
         flex-direction: column;
         gap: 1em;
         align-items: center;
@@ -311,7 +311,7 @@ body {
         margin: 10px 10px
     }
 
-    #more-about-me h2{
+    #more-about-me h2 {
         margin: 15px;
     }
 
