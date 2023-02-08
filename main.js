@@ -7,19 +7,19 @@ document.querySelectorAll('.button').forEach(button => button.addEventListener('
 }));
 
 function mostrar_home() {
-    mostrar = document.getElementById("about-me");
+    let mostrar = document.getElementById("about-me");
     mostrar.style.display = "block";
-    ocultar = document.getElementById("more-about-me");
+    let ocultar = document.getElementById("more-about-me");
     ocultar.style.display = "none";
     ocultar = document.getElementById("experiencias");
     ocultar.style.display = "none";
     ocultar = document.getElementById("proyectos");
     ocultar.style.display = "none";
-};
+}
 function mostrar_about() {
-    mostrar = document.getElementById("more-about-me");
+    let mostrar = document.getElementById("more-about-me");
     mostrar.style.display = "block";
-    ocultar = document.getElementById("about-me");
+    let ocultar = document.getElementById("about-me");
     ocultar.style.display = "none";
     ocultar = document.getElementById("experiencias");
     ocultar.style.display = "none";
@@ -27,9 +27,9 @@ function mostrar_about() {
     ocultar.style.display = "none";
 }
 function mostrar_exp() {
-    mostrar = document.getElementById("experiencias");
+    let mostrar = document.getElementById("experiencias");
     mostrar.style.display = "block";
-    ocultar = document.getElementById("about-me");
+    let ocultar = document.getElementById("about-me");
     ocultar.style.display = "none";
     ocultar = document.getElementById("more-about-me");
     ocultar.style.display = "none";
@@ -37,9 +37,9 @@ function mostrar_exp() {
     ocultar.style.display = "none";
 }
 function mostrar_pro() {
-    mostrar = document.getElementById("proyectos");
+    let mostrar = document.getElementById("proyectos");
     mostrar.style.display = "block";
-    ocultar = document.getElementById("about-me");
+    let ocultar = document.getElementById("about-me");
     ocultar.style.display = "none";
     ocultar = document.getElementById("more-about-me");
     ocultar.style.display = "none";

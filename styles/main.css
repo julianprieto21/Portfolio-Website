@@ -11,7 +11,7 @@
 
 /* Pricipales */
 * {
-    font-family: "Readex Pro";
+    font-family: "Readex Pro", serif;
     line-height: 1.5em;
     box-sizing: border-box;
 }
@@ -55,7 +55,7 @@ h1 {
     display: none;
 }
 
-/* Cabezera */
+/* Cabecera */
 header img {
     border-radius: 50%;
     width: 200px;
@@ -197,7 +197,7 @@ body {
 
 @keyframes gradient {
     0% {
-        background-position: 0% 0%;
+        background-position: 0 0;
     }
 
     50% {
@@ -205,7 +205,7 @@ body {
     }
 
     100% {
-        background-position: 0% 0%;
+        background-position: 0 0;
     }
 }
 
@@ -260,13 +260,13 @@ body {
     height: 1px;
 }
 
-/* Proyects */
-.card--proyect {
+/* Projects */
+.card--project {
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.card--proyect li {
+.card--project li {
     list-style: none;
     margin-left: 30px;
 }
@@ -336,7 +336,7 @@ body {
         margin-right: 20px;
     }
 
-    .card--proyect a {
+    .card--project a {
         margin-left: 30px;
     }
 
