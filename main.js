@@ -6,43 +6,32 @@ document.querySelectorAll('.button').forEach(button => button.addEventListener('
     e.preventDefault();
 }));
 
+const aboutMe = document.getElementById("about-me");
+const moreAboutMe = document.getElementById("more-about-me");
+const experience = document.getElementById("experiencias");
+const projects = document.getElementById("proyectos");
+
 function mostrar_home() {
-    let mostrar = document.getElementById("about-me");
-    mostrar.style.display = "block";
-    let ocultar = document.getElementById("more-about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("experiencias");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("proyectos");
-    ocultar.style.display = "none";
+    aboutMe.style.display = "block";
+    moreAboutMe.style.display = "none";
+    experience.style.display = "none";
+    projects.style.display = "none";
 }
 function mostrar_about() {
-    let mostrar = document.getElementById("more-about-me");
-    mostrar.style.display = "block";
-    let ocultar = document.getElementById("about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("experiencias");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("proyectos");
-    ocultar.style.display = "none";
+    aboutMe.style.display = "none";
+    moreAboutMe.style.display = "block";
+    experience.style.display = "none";
+    projects.style.display = "none";
 }
 function mostrar_exp() {
-    let mostrar = document.getElementById("experiencias");
-    mostrar.style.display = "block";
-    let ocultar = document.getElementById("about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("more-about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("proyectos");
-    ocultar.style.display = "none";
+    aboutMe.style.display = "none";
+    moreAboutMe.style.display = "none";
+    experience.style.display = "block";
+    projects.style.display = "none";
 }
 function mostrar_pro() {
-    let mostrar = document.getElementById("proyectos");
-    mostrar.style.display = "block";
-    let ocultar = document.getElementById("about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("more-about-me");
-    ocultar.style.display = "none";
-    ocultar = document.getElementById("experiencias");
-    ocultar.style.display = "none";
+    aboutMe.style.display = "none";
+    moreAboutMe.style.display = "none";
+    experience.style.display = "none";
+    projects.style.display = "block";
 }
